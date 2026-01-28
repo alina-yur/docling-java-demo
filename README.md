@@ -69,13 +69,6 @@ If you want to run Docling without a separate container, you can use [docling4j]
 
 3. No external container needed - Docling runs embedded in the JVM
 
-### Trade-offs
-
-| Approach | Pros | Cons |
-|----------|------|------|
-| **quarkus-docling** (this project) | Stable, smaller app binary | Requires docling-serve container |
-| **docling4j** | No external container | Larger binary, WIP, needs GraalPy |
-
 ## Resources
 
 - [Quarkus Docling Documentation](https://docs.quarkiverse.io/quarkus-docling/dev/index.html)
