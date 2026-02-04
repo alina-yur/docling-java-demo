@@ -4,8 +4,8 @@ A Quarkus application that converts documents (PDF, DOCX, etc.) to Markdown usin
 
 ## Prerequisites
 
-- Java 21+
-- Docker or Podman running
+- GraalVM
+- Podman/Docker
 
 ## Running the Application
 
@@ -18,12 +18,17 @@ mvn quarkus:dev
 ```shell
 mvn package -Dnative
 # mvn package -Dnative -Dquarkus.native.additional-build-args="-Ob"
+```
+
+## Run
+
+```
+shell
+podman run -p 5001:5001 quay.io/docling-project/docling-serve
 
 ./target/docling-java-1.0.0-SNAPSHOT-runner -Dquarkus.docling.base-url=http://localhost:5001
 ```
 
-
-This automatically starts a Docling container via Dev Services. The app will be available at `http://localhost:8080`.
 
 ## API Endpoints
 

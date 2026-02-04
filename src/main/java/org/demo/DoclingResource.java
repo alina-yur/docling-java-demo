@@ -29,7 +29,7 @@ public class DoclingResource {
     public String fromUrl(@RestQuery String url) {
         return doclingService.convertFromUri(URI.create(url), OutputFormat.MARKDOWN)
                 .getDocument()
-                .getMarkdownContent() + "\n";
+                .getMarkdownContent();
     }
 
     @POST
@@ -42,6 +42,6 @@ public class DoclingResource {
                 file.fileName(),
                 OutputFormat.MARKDOWN)
                 .getDocument()
-                .getMarkdownContent() + "\n";
+                .getMarkdownContent();
     }
 }
