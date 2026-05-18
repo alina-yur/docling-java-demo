@@ -15,9 +15,11 @@ mvn quarkus:dev
 
 ## Build a GraalVM Native Image
 
+Standard build command:
+
 ```shell
-mvn package -Dnative
-# mvn package -Dnative -Dquarkus.native.additional-build-args="-Ob"
+mvn package -Pnative -DskipTests
+# mvn package -Pnative -DskipTests -Dquarkus.native.additional-build-args="-Ob"
 ```
 
 ## Run
